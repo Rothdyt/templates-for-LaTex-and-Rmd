@@ -12,7 +12,7 @@ There's no need to install.
 - To make a cheatsheet, just use the `main.tex`. A minimal example is given in the folder  `sample`.
 - To write lecture notes or homework, follow the instructions given in `exmaple.Rmd` files.
 
-## Quick Prview
+## Quick Preview
 
 - homework
     ![hw](img/hw.png)
