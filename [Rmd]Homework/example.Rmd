@@ -1,0 +1,52 @@
+---
+author: "Your Name"
+date: "`r Sys.Date()`"
+lecnum: "1"
+instructor: "Prof. XXX"
+course: "STAT-XXX"
+term: "2017 Fall"
+output: 
+  pdf_document:
+    number_sections: yes
+    template: "./template.tex"
+    keep_tex: no
+fontsize: 12pt
+bibliography: "./book.bib"
+link-citations: yes
+linkcolor: "black"
+csl: "./ieee.csl"
+header-includes:
+  - \newcommand{\iid}{\overset{iid}\sim}
+  - \usepackage{graphicx}
+  - \usepackage{float}
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(fig.pos="H",fig.align = "center",fig.height = 3.5)
+```
+
+# Produce plots with captions
+
+```{r line,echo=T,fig.cap="\\label{line}This plot represents $$y=x$$."}
+x <- seq_len(20)
+y <- x
+plot(x,y,type="l")
+```
+
+# Produce tabels with captions
+
+```{r table}
+name <- c("Kate","John")
+age <- c(10,20)
+sex <- c("female","male")
+data <- data.frame(name,age,sex)
+knitr::kable(data, caption="\\label{info}Information for kids.", row.names = T)
+```
+
+# Use Citation
+From \ref{line}, we know that ...
+From \ref{info}, we know that ...
+As Nesterov pointed out in [@nesterov2013introductory], we know that ...
+
+# Reference {-}

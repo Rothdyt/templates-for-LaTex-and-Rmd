@@ -1,0 +1,26 @@
+\documentclass{cheatsheet}
+
+\usepackage{sectsty}
+\sectionfont{\fontsize{6}{6}\selectfont}
+\usepackage{titlesec}
+\titlespacing\section{0pt}{0pt plus 1pt minus 1pt}{0pt plus 1pt minus 1pt}
+
+\usepackage{theorem}
+\theorembodyfont{\normalfont}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newenvironment{proof}{{\bf Proof:}}{\hfill\rule{2mm}{2mm}}
+
+\begin{document}
+\tiny
+\begin{multicols*}{5}
+\Info{a}{Yutong Dai}
+\vspace{-3\baselineskip}
+\input{section1}
+\end{multicols*}
+\end{document}1
