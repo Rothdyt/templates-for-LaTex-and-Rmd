@@ -1,0 +1,17 @@
+---
+title: "STAT-510"
+documentclass: cheatsheet
+author: "Yutong Dai"
+csl: cheatsheet.cls
+output: 
+  pdf_document:
+    number_sections: yes
+    template: "../resources/template.tex"
+    keep_tex: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+test

@@ -1,4 +1,4 @@
-\documentclass{cheatsheet}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$,twoside]{$documentclass$}
 
 \usepackage{sectsty}
 \sectionfont{\fontsize{6}{6}\selectfont}
@@ -19,8 +19,8 @@
 \begin{document}
 \tiny
 \begin{multicols*}{5}
-\Info{Title}{Your Name}
+\Info{$if(title)$$title$$endif$}{$if(author)$$author$$endif$}
 \vspace{-3\baselineskip}
-\input{section1}
+
 \end{multicols*}
 \end{document}1
