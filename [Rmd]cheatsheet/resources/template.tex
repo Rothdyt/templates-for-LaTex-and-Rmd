@@ -4,7 +4,7 @@
 \sectionfont{\fontsize{6}{6}\selectfont}
 \usepackage{titlesec}
 \titlespacing\section{0pt}{0pt plus 1pt minus 1pt}{0pt plus 1pt minus 1pt}
-
+\usepackage{amsmath}
 \usepackage{theorem}
 \theorembodyfont{\normalfont}
 \newtheorem{theorem}{Theorem}
@@ -15,12 +15,42 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{example}[theorem]{Example}
 \newenvironment{proof}{{\bf Proof:}}{\hfill\rule{2mm}{2mm}}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+$for(header-includes)$
+$header-includes$
+$endfor$
 
 \begin{document}
 \tiny
 \begin{multicols*}{5}
 \Info{$if(title)$$title$$endif$}{$if(author)$$author$$endif$}
 \vspace{-3\baselineskip}
+$for(include-before)$
+$include-before$
+$endfor$
+
+$if(toc)$
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+}
+$endif$
+
+$if(lot)$
+\listoftables
+$endif$
+
+$if(lof)$
+\listoffigures
+$endif$
+
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
 
 \end{multicols*}
 \end{document}1

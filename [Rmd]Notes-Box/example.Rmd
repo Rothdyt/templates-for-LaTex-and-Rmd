@@ -1,0 +1,97 @@
+---
+title: "XXX"
+author: "Your Name"
+date: "`r Sys.Date()`"
+lecnum: "1"
+instructor: "Prof. XXX"
+course: "STAT-XXX"
+term: "2017 Fall"
+output: 
+  pdf_document:
+    number_sections: yes
+    template: "./template.tex"
+    keep_tex: no
+fontsize: 12pt
+bibliography: "./book.bib"
+link-citations: yes
+linkcolor: "black"
+box: yes
+csl: "./ieee.csl"
+header-includes:
+  - \newcommand{\iid}{\overset{iid}\sim}
+  - \usepackage{graphicx}
+  - \usepackage{float}
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(fig.pos="H",fig.align = "center",fig.height = 3.5)
+```
+
+# Section 1
+
+Using `definition`:
+
+```
+\begin{definition}[label=def]{}{}
+  This is the text of the theorem. The counter is automatically assigned and,
+  in this example, prefixed with the section number.
+\end{definition}
+```
+
+\begin{definition}[label=def]{}{}
+          This is the text of the theorem. The counter is automatically assigned and,
+          in this example, prefixed with the section number.
+\end{definition}
+
+Use `theorem`[similar for corollary, lemma, claim, proporsition]:
+
+```
+\begin{theorem}[label=thm]{ABC}{}
+  This is the text of the theorem. The counter is automatically assigned and,
+  in this example, prefixed with the section number.
+\end{theorem}
+```
+
+\begin{theorem}[label=thm]{ABC}{}
+          This is the text of the theorem. The counter is automatically assigned and,
+          in this example, prefixed with the section number.
+\end{theorem}
+
+Use `remark`[similar for example]:
+
+```
+\begin{remark}[label=re1]{}{}
+  This is the text of the theorem. The counter is automatically assigned and,
+  in this example, prefixed with the section number.
+\end{remark}
+```
+
+\begin{remark}[label=re1]{}{}
+          This is the text of the theorem. The counter is automatically assigned and,
+          in this example, prefixed with the section number.
+\end{remark}
+
+# Section 2
+
+\begin{lemma}[label=lem]{}{}
+          This is the text of the theorem. The counter is automatically assigned and,
+          in this example, prefixed with the section number.
+\end{lemma}
+
+\begin{example}[label=ex]{}{}
+          This is the text of the theorem. The counter is automatically assigned and,
+          \tcblower
+          in this example, prefixed with the section number.
+\end{example}
+
+\begin{remark}[label=re2]{}{}
+          This is the text of the theorem. The counter is automatically assigned and,
+          in this example, prefixed with the section number.
+\end{remark}
+
+
+\ref{def},\ref{re2},\ref{thm},\ref{lem},\ref{ex},\ref{re1}
+
+
+
