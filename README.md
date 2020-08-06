@@ -22,3 +22,15 @@ There's no need to install.
 
 
 
+* cornell notes
+
+  * standalone mode
+  
+   ![cornell-s](img/cornell-standalone.png)
+
+  
+  
+  * collection mode
+  
+    ![cornell-c](img/cornell-collection1.png)
+    ![cornell-c](img/cornell-collection2.png)
