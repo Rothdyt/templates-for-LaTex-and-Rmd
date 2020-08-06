@@ -29,8 +29,8 @@
         \end{tcolorbox}
 }
 
-% --------------------- summary ---------------------------
-\DeclareDocumentCommand\summary{ m m }
+% --------------------- pre ---------------------------
+\DeclareDocumentCommand\pre{ m m }
 {
     \begin{tcolorbox}[colback=orange!10,colframe=orange!80, width=\textwidth]
         #1
@@ -57,13 +57,13 @@
     \end{parcolumns}
 }
 
-% --------------------- comment ---------------------------
-\DeclareDocumentCommand\comment{ m }
+% --------------------- summary ---------------------------
+\DeclareDocumentCommand\summary{ m m }
 {
     \begin{tcolorbox}[colback=black!05,colframe=black!25,floatplacement=b,float]
-    Summary
-    \tcblower
         #1
+    \tcblower
+        #2
     \end{tcolorbox}
 }
 
